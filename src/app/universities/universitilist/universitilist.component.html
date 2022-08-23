@@ -1,0 +1,103 @@
+     
+
+      
+  <!-- <body >
+        
+        <div   *ngFor="let item of universitiListItems" > 
+          <div class="d-felx justify-content-between"> 
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                 <i class="bi bi-geo-alt-fill">  <b>{{item.name}}</b>  </i>
+            </button>
+          
+              <button type="button" class="btn btn-warning"> 
+                <i class="bi bi-globe">
+                <small class="text_muted" >({{item.country}})</small>
+                </i>
+              </button>
+
+
+              <button type="button" class="btn btn-danger">
+                <i class="bi bi-pin-map-fill">
+                <small>({{item.alpha_two_code}})</small>
+                </i>
+              </button>
+
+               
+            
+              <button type="button" class="btn btn-success">
+                 <i class="bi bi-server"><small>{{item.domains}}</small></i>
+              </button>
+
+            </div>
+
+            <button type="button" class="btn btn-outline-light">
+                      <p *ngIf="item.web_pages?.length > 0">
+                        <a  *ngFor="let address of item.web_pages" [href]="address" >
+                          <i class="bi bi-search"> <small class="address"> {{address}}</small></i> 
+                        </a> 
+                      </p>
+             </button>
+             
+               <hr>
+      </div>
+      </body> -->
+<!--            
+                <tamrin avale ghesmate bala> -->
+
+   
+
+                  
+
+
+
+
+
+
+
+                  <body>
+                    
+                  
+            <input type="text" name="countryname" value="" id="countryname" #countryname>
+        <button (click)="country(countryname.value)" type="button" class="btn btn-dark"> Search Country</button>
+        <div class="spinner-grow text-dark" role="status">
+        <span class="visually-hidden" ></span>
+        </div>
+
+
+
+
+      <table class="table-light"  *ngFor="let item of universitiListItems">
+        <thead>
+          <tr class="table-primary">
+            <th class="table-info" scope="col">#</th>
+            <th class="table-info" scope="col">Location</th>
+            <th class="table-info" scope="col">Country</th>
+            <th class="table-info" scope="col">Alpha two code</th>
+            <th class="table-info" scope="col">Domain</th>
+            <th class="table-info" scope="col">Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td class="table-success"> <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">  <i class="bi bi-geo-alt-fill">  <b class="fix">{{item.name}}</b> </i> </button>   </td>
+
+            <td class="table-success"> <button type="button" class="btn btn-warning"> <i class="bi bi-globe"> <small class="fix" >({{item.country}})</small></i></button> </td>
+
+            <td class="table-success"> <button type="button" class="btn btn-danger"> <i class="bi bi-pin-map-fill"><small class="fix">({{item.alpha_two_code}})</small></i> </button>  </td>
+            
+            <td class="table-success"><button type="button" class="btn btn-success"><i class="bi bi-server"><small class="fix">{{item.domains}}</small></i></button></td>
+           
+           <td class="table-success">  <button type="button" class="btn btn-outline-light"> <p *ngIf="item.web_pages?.length > 0"> <a  *ngFor="let address of item.web_pages" [href]="address" > <i class="bi bi-search"> <small class="address"> {{address}}</small></i> </a></p></button>   </td>
+           
+             </tr> 
+              
+            
+        </tbody>
+      </table>
+</body>
+
+      
+
+
+      
